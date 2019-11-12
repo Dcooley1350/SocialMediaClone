@@ -18,10 +18,7 @@ function FriendList(){
     return (
         <div>
             <style jsx>{`
-            div{
-                border-style: solid;
-                border-color: black;
-              }
+           
             `}
             
             </style>
@@ -29,14 +26,14 @@ function FriendList(){
             <h2>Lorem Ipsum</h2>
             {masterFriendList.map((friend, index) =>
             <Friend name={friend.name}/>
+         
             )}
             <br/>
-            <button type="button">Add Friend</button>
         </div>
     );
 }
 
-
+export default FriendList;
 
 
 

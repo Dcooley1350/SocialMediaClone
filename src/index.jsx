@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-<div class="row">
 
-<div class="col-md-6">Outline</div>
-<div class="col-md-6">Newsfeed</div>
-<div class="col-md-6">Frenz</div>
 
-</div>
+    ReactDOM.render(
+
+        <App/>,
+      document.getElementById('root')
+    );
+
+
+  
+
