@@ -1,4 +1,18 @@
 import React from 'react';
+import NewsFeedMakePost from './NewsFeedMakePost';
+import NewsFeedOldPost from './NewsFeedOldPost';
+
+var masterPostList =  [
+    {
+        name: 'Lorem ipsum'
+    },
+    {
+        name: 'Lorem ipsum'
+    },
+    {
+        name: 'Lorem ipsum'
+    }
+];
 
 function Newsfeed(){
     return (
@@ -7,14 +21,16 @@ function Newsfeed(){
             
             `}
             </style>
-            <div class="card">
-            <h2>Lorem Ipsum</h2>
-            <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit pellentesque habitant morbi tristique senectus et.</p>
-            </div>
-            </div>
+            <NewsFeedMakePost/>
+
+            {masterPostList.map((newsFeedOldPost, index) =>
+            <NewsFeedOldPost name={newsFeedOldPost.name}/>
+         
+            )}
 
         </div>
 )
 
 }
+
+export default Newsfeed;

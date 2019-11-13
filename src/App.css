@@ -1,0 +1,10 @@
+.greyDivBorder {
+    border: 2px;
+    color: grey;
+    border-color: grey;
+    }
+
+.Poictogram {
+    width: 50px;
+    height: 50px;
+}

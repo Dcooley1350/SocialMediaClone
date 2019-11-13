@@ -1,29 +1,24 @@
 import React from 'react';
+import Poictogram from './Poictogram';
 
 
 function Friend(props){
     return (
-        <div>
-            <style jsx>{`
-                .friendRow{
-                    border-style: solid;
-                    border-color: black;
-                    width: 100;
-                    height: 100;
-                
-                }
+        <div className= "greyDivBorder">
+            <style jsx>{`      
                 button{
                     background-color: blue;
                 }
                
             `}
             </style>
-          <div class="row friendRow">
-          <div class="col-md-4">
-          <box>i am a box</box>
+          <div className="row friendRow">
+          <div className="col-md-4">
+          <Poictogram/>
+          <br/>
         <button type="button">Add Friend</button>
           </div>
-          <div class="col-md-8">
+          <div className="col-md-8">
             <h2>{props.name}</h2>
             <br/>
             <button>Button</button>
