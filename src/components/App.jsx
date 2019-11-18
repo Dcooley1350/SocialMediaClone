@@ -1,9 +1,10 @@
 import React from 'react';
 import Newsfeed from './Newsfeed';
-import '../App.css';
 import FriendList from './FriendList';
 import Description from './Description';
 import Profile from './Profile';
+import Header from './Header';
+import '../css/GlobalStyles.css'
 
 function App() {
   return (
@@ -14,14 +15,16 @@ function App() {
             color: grey;
             border-color: grey;
             }
+
         `}
       </style>
 
-    <div className="row">
-    <div className="col-md-4"><Profile/><Description/></div>
-    <div className="col-md-4"><Newsfeed/></div>
-    <div className="col-md-4"><FriendList/></div>
-    </div>
+      <Header/>
+      <div className="fullHeightRow row">
+        <div className="col l2 sidebar fullHeightRow"></div>
+        <div className="col l8"><Newsfeed/></div>
+        <div className="col l2"><FriendList/></div>
+      </div>
     </div>
   );
 }

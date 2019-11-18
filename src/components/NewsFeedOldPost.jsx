@@ -1,34 +1,38 @@
 import React from 'react';
 import Poictogram from './Poictogram';
-
+import PropTypes from 'prop-types';
 function NewsFeedOldPost(props) {
-    return(
-        <div className="greyDivBorder">
-            <style jsx>{`
+  return(
+    <div className="greyDivBorder">
+      <style jsx>{`
 
 
             `}
-            </style>
+      </style>
 
-            <div className="card">
-            <div className="card-body">
+      <div className="card">
+        <div className="card-body">
             
-            <div className="row">
+          <div className="row">
             
             <div className="col-md-3">
-            <Poictogram/>
+              <Poictogram/>
             </div>
             
             <div className="col-md-9">
-            <h2>{props.name}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit pellentesque habitant morbi tristique senectus et.</p>
+              <h2>{props.name}</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit pellentesque habitant morbi tristique senectus et.</p>
             </div>
-            </div>
-            </div>
-            </div>
-
+          </div>
         </div>
-    )
+      </div>
+
+    </div>
+  );
 }
+
+NewsFeedOldPost.propTypes={
+  name: PropTypes.string
+};
 
 export default NewsFeedOldPost;
