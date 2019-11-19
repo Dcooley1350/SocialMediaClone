@@ -1,10 +1,9 @@
 import React from 'react';
 import Newsfeed from './Newsfeed';
 import FriendList from './FriendList';
-import Description from './Description';
-import Profile from './Profile';
 import Header from './Header';
-import '../css/GlobalStyles.css'
+import '../css/GlobalStyles.css';
+import SideBar from './Sidebar';
 
 function App() {
   return (
@@ -21,7 +20,8 @@ function App() {
 
       <Header/>
       <div className="fullHeightRow row">
-        <div className="col l2 sidebar fullHeightRow"></div>
+        <div className="col l2 sidebar fullHeightRow"><SideBar/></div>
+        
         <div className="col l8"><Newsfeed/></div>
         <div className="col l2"><FriendList/></div>
       </div>

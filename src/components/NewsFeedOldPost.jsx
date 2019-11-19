@@ -1,9 +1,26 @@
 import React from 'react';
 import Poictogram from './Poictogram';
 import PropTypes from 'prop-types';
+import LikeButtonController from './LikeButtonController';
+
 function NewsFeedOldPost(props) {
+
+  var poictogramStyles={
+    marginTop: 'auto',
+    maginBottom: 'auto',
+    paddingLeft: '50px',
+    paddingRight: '50px',
+    height: '80%',
+    width: '80%',
+    borderColor: 'red'
+  };
+  // var buttonStyles={
+  //   backgroundColor: 'blue',
+  //   color: 'white'
+  // };
+
   return(
-    <div className="greyDivBorder">
+    <div className="">
       <style jsx>{`
 
 
@@ -15,13 +32,14 @@ function NewsFeedOldPost(props) {
             
           <div className="row">
             
-            <div className="col-md-3">
-              <Poictogram/>
+            <div className="col l2">
+              <Poictogram style={poictogramStyles}/>
             </div>
             
-            <div className="col-md-9">
+            <div className="col l10">
               <h2>{props.name}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit pellentesque habitant morbi tristique senectus et.</p>
+              <p>{props.post}</p>
+              <LikeButtonController className='right'/>
             </div>
           </div>
         </div>
@@ -32,7 +50,8 @@ function NewsFeedOldPost(props) {
 }
 
 NewsFeedOldPost.propTypes={
-  name: PropTypes.string
+  name: PropTypes.string,
+  post: PropTypes.string
 };
 
 export default NewsFeedOldPost;

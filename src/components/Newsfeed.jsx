@@ -4,36 +4,40 @@ import NewsFeedOldPost from './NewsFeedOldPost';
 import PropTypes from 'prop-types';
 
 
-var masterPostList =  [
-  {
-    name: 'Lorem ipsum'
-  },
-  {
-    name: 'Lorem ipsum'
-  },
-  {
-    name: 'Lorem ipsum'
-  }
-];
 
-function Newsfeed(){
-  return (
+
+class Newsfeed extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state={
+      masterPostList: []
+    };
+    this.handleAddingNewPostToList=this.handleAddingNewPostToList.bind(this);
+  }
+  handleAddingNewPostToList(newPost){
+    var newMasterPostList= this.state.masterPostList.slice();
+    newMasterPostList.push(newPost);
+    this.setState({masterPostList: newMasterPostList});
+    console.log(newMasterPostList);
+  }
+  render(){
+    return(
     <div>
       <style jsx>{`
             
             `}
       </style>
-      <NewsFeedMakePost/>
-
-      {masterPostList.map((newsFeedOldPost, index) =>
-        <NewsFeedOldPost name={newsFeedOldPost.name}
+      <NewsFeedMakePost onAddingNewPostToList={this.handleAddingNewPostToList}/>
+      
+      {this.state.masterPostList.map((feedpost, index) =>
+        <NewsFeedOldPost name={feedpost.name}
+          post={feedpost.post}
           key={index}/>
-         
+          
       )}
-
     </div>
-  );
-
+    );
+  } 
 }
 Newsfeed.propTypes={
   name: PropTypes.string

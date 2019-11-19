@@ -24,7 +24,7 @@ function FriendList(){
             
       </style>
                
-      <h2>Lorem Ipsum</h2>
+      <h2>People You May Know</h2>
       {masterFriendList.map((friend, index) =>
         <Friend name={friend.name}
           key={index}/>
